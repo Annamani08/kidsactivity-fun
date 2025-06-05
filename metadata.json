@@ -1,5 +1,6 @@
 {
   "name": "Kids Activity Fun",
   "description": "An interactive web application for kids featuring AI-generated stories, riddles, and drawing ideas to spark creativity and fun. Uses Gemini API for content generation.",
-  "requestFramePermissions": []
+  "requestFramePermissions": [],
+  "prompt": ""
 }

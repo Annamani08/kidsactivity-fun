@@ -40,6 +40,10 @@ const StoryActivity: React.FC = () => {
     }
   }, [selectedCategory]);
 
+  const handleSelectCategory = (category: StoryCategory) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <div className="p-4 sm:p-6 bg-white rounded-xl shadow-2xl max-w-2xl mx-auto space-y-6 transform transition-all duration-500 ease-out hover:shadow-3xl">
       <div className="flex items-center space-x-3 mb-4">
@@ -51,7 +55,7 @@ const StoryActivity: React.FC = () => {
       <CategorySelector
         categories={STORY_CATEGORIES}
         selectedCategory={selectedCategory}
-        onSelectCategory={setSelectedCategory}
+        onSelectCategory={handleSelectCategory}
         label="Choose a Story Theme"
       />
 

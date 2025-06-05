@@ -42,6 +42,10 @@ const RiddleActivity: React.FC = () => {
     }
   }, [selectedCategory]);
 
+  const handleSelectCategory = (category: RiddleCategory) => {
+    setSelectedCategory(category);
+  };
+
   return (
     <div className="p-4 sm:p-6 bg-white rounded-xl shadow-2xl max-w-2xl mx-auto space-y-6">
       <div className="flex items-center space-x-3 mb-4">
@@ -53,7 +57,7 @@ const RiddleActivity: React.FC = () => {
       <CategorySelector
         categories={RIDDLE_CATEGORIES}
         selectedCategory={selectedCategory}
-        onSelectCategory={setSelectedCategory}
+        onSelectCategory={handleSelectCategory}
         label="Choose a Riddle Theme"
       />
 
